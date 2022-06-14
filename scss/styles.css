@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+body {
+  background-color: #000118;
+  color: #ffffff;
+}
+
+#coin-name {
+  font-size: 4.2rem;
+  text-shadow: 0px 0px 10px rgba(196, 196, 196, 0.15);
+  border-top: solid white;
+  border-bottom: solid white;
+}
+
+input {
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  padding: 15px;
+  border: solid #531153;
+  border-radius: 3px;
+}
+
+#connect-wallet-btn {
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: #0000a1;
+  color: white;
+  padding: 15px;
+  font-size: 2rem;
+  border: none;
+  transition: all .3s;
+}
+
+#connect-wallet-btn:hover {
+  box-shadow: 0px 0px 25px 8px rgba(0, 0, 107, 0.15);
+  background-color: #00006b;
+}
+
+#connect-wallet-btn:active {
+  box-shadow: 0px 0px 25px 8px rgba(0, 0, 161, 0.15);
+  background-color: #0000a1;
+}
+
+.mint-coins-container,
+.check-balance-container {
+  display: flex;
+  justify-content: center;
+  grid-gap: 8px;
+}
+
+#mint-coins-btn {
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: #008b05;
+  color: white;
+  padding: 10px;
+  font-size: 1.5rem;
+  border: none;
+  transition: all .3s;
+}
+
+#mint-coins-btn:hover {
+  background-color: #006703;
+  box-shadow: 0px 0px 25px 8px rgba(0, 103, 3, 0.15);
+}
+
+#mint-coins-btn:active {
+  background-color: #008b05;
+  box-shadow: 0px 0px 25px 8px rgba(0, 139, 5, 0.15);
+}
+
+#check-balance-btn {
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: #b9bb20;
+  color: white;
+  padding: 10px;
+  font-size: 1.5rem;
+  border: none;
+  transition: all .3s;
+}
+
+#check-balance-btn:hover {
+  box-shadow: 0px 0px 25px 8px rgba(155, 157, 13, 0.15);
+  background-color: #9a9d0d;
+}
+
+#check-balance-btn:active {
+  box-shadow: 0px 0px 25px 8px rgba(184, 187, 32, 0.15);
+  background-color: #b9bb20;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#amount-alert {
+  text-shadow: 0px 0px 10px rgba(196, 196, 196, 0.15);
+  margin: 20px;
+  font-size: 1.2rem;
+}
+
+.title {
+  text-shadow: 0px 0px 10px rgba(196, 196, 196, 0.15);
+  font-size: 2.5rem;
+  margin: 15px;
+}
+
+#check-balance-display {
+  text-shadow: 0px 0px 10px rgba(196, 196, 196, 0.15);
+  margin: 20px;
+  font-size: 2rem;
+}
+
+.full-app-container {
+  box-shadow: 0px 0px 27px 15px rgba(27, 19, 40, 0.15);
+  margin: 2rem 0;
+  background-color: rgba(106, 11, 115, 0.21);
+  display: inline-block;
+  border-radius: 3px;
+  padding: 30px;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,20 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEARNING</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BToken</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./scss/styles.css">
+    <!-- X CSS X -->
+  </head>
+  <body>
     <center>
-        <h1>
-            TYPESCRIPT
-        </h1>
+      <div class="full-app-container">
+        <h1 id="coin-name"></h1>
+        <br />
+        <br />
+
+        <button id="connect-wallet-btn">Connect Wallet</button>
+        <br />
+        <br />
+        <br />
+
+        <h1 class="title">Mint Coins</h1>
+        <div class="mint-coins-container">
+            <input type="number" placeholder="Amount" id="mint-amount-value" />
+            <button type="submit" id="mint-coins-btn">Mint</button>
+        </div>
+        <p id="amount-alert"></p>
+
+        <br />
+        <br />
+        <br />
+        <h1 class="title">Check Your Balance</h1>
+        <div class="check-balance-container">
+            <input type="text" placeholder="Address" id="check-balance-input"/>
+            <button id="check-balance-btn">Check Balance</button>
+        </div>
+        <h2 id="check-balance-display"></h2>
+      </div>
     </center>
 
     <!-- JAVASCRIPT -->
-    <script src="./dist/index.js"></script>
+    <script src="./dist/bundle.js"></script>
     <!-- JAVASCRIPT (END) -->
-</body>
+  </body>
 </html>

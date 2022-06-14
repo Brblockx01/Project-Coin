@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+*
+{
+    box-sizing: border-box;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+body
+{
+    background-color: rgb(0, 1, 24);
+    color: #ffffff;
+}
+
+#coin-name
+{
+    font-size: 4.2rem;
+    text-shadow: 0px 0px 10px rgba(196, 196, 196, 0.15);
+    border-top: solid white;
+    border-bottom: solid white;
+}
+
+input
+{
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+    padding: 15px;
+    border: solid rgb(83, 17, 83);
+    border-radius: 3px;
+}
+
+#connect-wallet-btn
+{
+    // box-shadow: 0px 0px 25px 8px rgba(0, 0, 161, 0.15);
+    // text-shadow: 0px 0px 10px rgba(196, 196, 196, 0.25);
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: rgb(0, 0, 161);
+    color: white;
+    padding: 15px;
+    font-size: 2rem;
+    border: none;
+
+    transition: all .3s;
+
+    &:hover
+    {
+        box-shadow: 0px 0px 25px 8px rgba(0, 0, 107, 0.15);
+        background-color: rgb(0, 0, 107);
+    }
+
+    &:active
+    {
+        box-shadow: 0px 0px 25px 8px rgba(0, 0, 161, 0.15);
+        background-color: rgb(0, 0, 161);
+    }
+}
+
+.mint-coins-container,
+.check-balance-container
+{
+    display: flex;
+    justify-content: center;
+    grid-gap: 8px;
+}
+
+#mint-coins-btn
+{
+    // box-shadow: 0px 0px 25px 8px rgba(0, 139, 5, 0.15);
+    // text-shadow: 0px 0px 10px rgba(196, 196, 196, 0.25);
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: rgb(0, 139, 5);
+    color: white;
+    padding: 10px;
+    font-size: 1.5rem;
+    border: none;
+
+    transition: all .3s;
+
+    &:hover
+    {
+        background-color: rgb(0, 103, 3);
+        box-shadow: 0px 0px 25px 8px rgba(0, 103, 3, 0.15);
+    }
+
+    &:active
+    {
+        background-color: rgb(0, 139, 5);
+        box-shadow: 0px 0px 25px 8px rgba(0, 139, 5, 0.15);
+    }
+}
+
+#check-balance-btn
+{
+    // box-shadow: 0px 0px 25px 8px rgba(184, 187, 32, 0.15);
+    // text-shadow: 0px 0px 10px rgba(196, 196, 196, 0.25);
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: rgb(185, 187, 32);
+    color: white;
+    padding: 10px;
+    font-size: 1.5rem;
+    border: none;
+
+    transition: all .3s;
+
+    &:hover
+    {
+        box-shadow: 0px 0px 25px 8px rgba(155, 157, 13, 0.15);
+        background-color: rgb(154, 157, 13);
+    }
+
+    &:active
+    {
+        box-shadow: 0px 0px 25px 8px rgba(184, 187, 32, 0.15);
+        background-color: rgb(185, 187, 32);
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#amount-alert
+{
+    text-shadow: 0px 0px 10px rgba(196, 196, 196, 0.15);
+    margin: 20px;
+    font-size: 1.2rem;
+}
+
+.title
+{
+    text-shadow: 0px 0px 10px rgba(196, 196, 196, 0.15);
+    font-size: 2.5rem;
+    margin: 15px;
+}
+
+#check-balance-display
+{
+    text-shadow: 0px 0px 10px rgba(196, 196, 196, 0.15);
+    margin: 20px;
+    font-size: 2rem;
+}
+
+.full-app-container
+{
+    box-shadow: 0px 0px 27px 15px rgba(27, 19, 40, 0.15);
+    margin: 2rem 0;
+    background-color: rgba(106, 11, 115, 0.21);
+    display: inline-block;
+    border-radius: 3px;
+    padding: 30px;
+}
