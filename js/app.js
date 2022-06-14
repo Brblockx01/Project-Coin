@@ -243,13 +243,6 @@ connectWalletBtn.addEventListener("click", async () => {
     }
 });
 
-const coinName = document.getElementById("coin-name");
-
-const nameFunction = async () => {
-    coinName.innerText = await BCoinContract.symbol();
-}
-nameFunction();
-
 const mintCoinsBtn = document.getElementById("mint-coins-btn");
 const mintAmountValue = document.getElementById("mint-amount-value");
 const amountAlert = document.getElementById("amount-alert");
