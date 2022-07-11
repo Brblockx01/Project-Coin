@@ -5,6 +5,11 @@ const provider = new ethers.providers.Web3Provider(window.ethereum);
 // Get the ABI of the interface instead.
 const contractAbi = [
   {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
     "anonymous": false,
     "inputs": [
       {
@@ -63,7 +68,7 @@ const contractAbi = [
       },
       {
         "internalType": "address",
-        "name": "delegate",
+        "name": "spender",
         "type": "address"
       }
     ],
@@ -82,12 +87,12 @@ const contractAbi = [
     "inputs": [
       {
         "internalType": "address",
-        "name": "delegate",
+        "name": "spender",
         "type": "address"
       },
       {
         "internalType": "uint256",
-        "name": "numTokens",
+        "name": "amount",
         "type": "uint256"
       }
     ],
@@ -106,7 +111,7 @@ const contractAbi = [
     "inputs": [
       {
         "internalType": "address",
-        "name": "tokenOwner",
+        "name": "account",
         "type": "address"
       }
     ],
@@ -137,8 +142,56 @@ const contractAbi = [
   {
     "inputs": [
       {
+        "internalType": "address",
+        "name": "spender",
+        "type": "address"
+      },
+      {
         "internalType": "uint256",
-        "name": "mintAmount",
+        "name": "subtractedValue",
+        "type": "uint256"
+      }
+    ],
+    "name": "decreaseAllowance",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "spender",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "addedValue",
+        "type": "uint256"
+      }
+    ],
+    "name": "increaseAllowance",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_amount",
         "type": "uint256"
       }
     ],
@@ -174,15 +227,28 @@ const contractAbi = [
     "type": "function"
   },
   {
+    "inputs": [],
+    "name": "totalSupply",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "inputs": [
       {
         "internalType": "address",
-        "name": "receiver",
+        "name": "to",
         "type": "address"
       },
       {
         "internalType": "uint256",
-        "name": "numTokens",
+        "name": "amount",
         "type": "uint256"
       }
     ],
@@ -201,17 +267,17 @@ const contractAbi = [
     "inputs": [
       {
         "internalType": "address",
-        "name": "owner",
+        "name": "from",
         "type": "address"
       },
       {
         "internalType": "address",
-        "name": "buyer",
+        "name": "to",
         "type": "address"
       },
       {
         "internalType": "uint256",
-        "name": "numTokens",
+        "name": "amount",
         "type": "uint256"
       }
     ],
@@ -230,7 +296,7 @@ const contractAbi = [
 
 const contractAddress = '0x67e3195D1DDdeeFE52204C4ddC037c932fd80EB7';
 const signer = provider.getSigner();
-const BCoinContract = new ethers.Contract(contractAddress, contractAbi, signer);
+const PCoinContract = new ethers.Contract(contractAddress, contractAbi, signer);
 
 
 const connectWalletBtn = document.getElementById("connect-wallet-btn");
@@ -256,7 +322,7 @@ mintCoinsBtn.addEventListener("click", async () => {
     if(mintAmountInputValue < 1) {
         amountAlert.innerText = "Please enter valid amount."
     } else {
-        let coinMinted = await BCoinContract.mint(mintAmountInputValue);
+        let coinMinted = await PCoinContract.mint(mintAmountInputValue);
         console.log(coinMinted.from);
         console.log(coinMinted);
     }
@@ -264,7 +330,7 @@ mintCoinsBtn.addEventListener("click", async () => {
 
 checkBalanceBtn.addEventListener("click", async () => {
     const checkBalanceInputValue = checkBalanceInput.value;
-    const addressBalance = await BCoinContract.balanceOf(checkBalanceInputValue);
+    const addressBalance = await PCoinContract.balanceOf(checkBalanceInputValue);
     checkBalanceDisplay.innerText = addressBalance;
     
     // add try catch
